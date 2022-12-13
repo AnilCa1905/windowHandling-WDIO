@@ -11,16 +11,14 @@ module.exports = class Common {
         await browser.maximizeWindow();
         //     await this.$homePageHeader().waitForDisplayed(10000);
     }
-    async verifyUrl(url,baseUrl) {
-        try
-        {
+    async verifyUrl(url, baseUrl) {
+        try {
             await browser.switchWindow(url);
             await browser.closeWindow();
             await browser.switchWindow(baseUrl);
-            return true
-        } 
-        catch (e) 
-        {
+            return true;
+        }
+        catch (e) {
             console.log(e)
             return false;
         }
