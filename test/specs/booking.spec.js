@@ -1,7 +1,7 @@
 const { homePage } = require('../pageobjects/homePage');
 const { flightPage } = require('../pageobjects/flightsPage');
 
-describe('End to End flow for booking.com', () => {
+xdescribe('End to End flow for booking.com', () => {
     it('User should be able to load the url successfully', async () => {
         await homePage.openUrl();
         await expect(browser).toHaveUrl(`https://www.booking.com/`);
